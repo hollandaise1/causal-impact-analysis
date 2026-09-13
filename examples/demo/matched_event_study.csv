@@ -1,0 +1,9 @@
+period,relative_period,reference,estimate,std_error,ci_lower,ci_upper,p_value,n_pairs,inference
+0,-4,False,9.2353703431644,7.083417612881319,-4.743997898309077,23.214738584637878,0.19400402520554802,177.0,Paired t interval conditional on selected matches; excludes propensity/match uncertainty
+1,-3,False,1.5270649029422703,7.15506796256622,-12.593707767525215,15.647837573409754,0.831243106165021,177.0,Paired t interval conditional on selected matches; excludes propensity/match uncertainty
+2,-2,False,8.304963131050922,7.424656071741882,-6.347850943390222,22.957777205492064,0.2648499844587798,177.0,Paired t interval conditional on selected matches; excludes propensity/match uncertainty
+3,-1,True,0.0,0.0,0.0,0.0,,,
+4,0,False,145.62950369554432,7.5010520553706295,130.82591952032953,160.4330878707591,1.291698657137559e-45,177.0,Paired t interval conditional on selected matches; excludes propensity/match uncertainty
+5,1,False,152.23821561553652,7.500859517252011,137.43501142091978,167.04141981015326,5.74282004763177e-48,177.0,Paired t interval conditional on selected matches; excludes propensity/match uncertainty
+6,2,False,156.58542422997573,7.331359176573436,142.11673478641532,171.05411367353614,9.544974127500266e-51,177.0,Paired t interval conditional on selected matches; excludes propensity/match uncertainty
+7,3,False,149.39024560163205,8.021522061312739,133.55949597192318,165.2209952313409,1.7989335122369296e-43,177.0,Paired t interval conditional on selected matches; excludes propensity/match uncertainty

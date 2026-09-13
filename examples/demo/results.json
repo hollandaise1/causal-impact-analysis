@@ -1,0 +1,92 @@
+{
+  "config": {
+    "unit": "customer_id",
+    "period": "month",
+    "treated": "attended",
+    "outcome": "revenue",
+    "covariates": [
+      "baseline_revenue",
+      "revenue_trend",
+      "revenue_volatility"
+    ],
+    "treatment_period": 4,
+    "caliper_sd": 0.2,
+    "seed": 42
+  },
+  "sample": {
+    "n_customers": 600,
+    "n_rows": 4800,
+    "pre_months": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "post_months": [
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "matching": {
+    "support_lower": 0.058777332345084456,
+    "support_upper": 0.8293152966976681,
+    "logit_caliper": 0.1841457412798318,
+    "n_treated": 223,
+    "n_control": 377,
+    "n_pairs": 177,
+    "treated_retained_fraction": 0.7937219730941704,
+    "n_outside_support": 14
+  },
+  "estimates": {
+    "did": {
+      "estimate": 158.32650462135246,
+      "std_error": 3.8638840581200626,
+      "ci_lower": 150.73807242203395,
+      "ci_upper": 165.91493682067096,
+      "p_value": 9.110999097641292e-176,
+      "n_units": 600,
+      "inference": "HC3 on one pre/post change per independent unit; t reference"
+    },
+    "psm_post_att": {
+      "estimate": 150.3532204269693,
+      "std_error": 31.44555635764075,
+      "ci_lower": 88.2943336147521,
+      "ci_upper": 212.4121072391865,
+      "p_value": 3.6628065731362553e-06,
+      "n_pairs": 177,
+      "inference": "Paired t interval conditional on selected matches; excludes propensity/match uncertainty"
+    },
+    "matched_did": {
+      "estimate": 146.19399769138275,
+      "std_error": 4.2512956243570175,
+      "ci_lower": 137.80391958442823,
+      "ci_upper": 154.58407579833727,
+      "p_value": 5.04690534673527e-80,
+      "n_pairs": 177,
+      "inference": "Paired t interval conditional on selected matches; excludes propensity/match uncertainty"
+    }
+  },
+  "warnings": [
+    "Causal interpretation requires the documented identification assumptions.",
+    "PSM and matched DiD target retained treated units, not necessarily all treated units.",
+    "Matched confidence intervals condition on matches and omit propensity estimation uncertainty.",
+    "Independent units are assumed. Cluster-assigned treatment requires cluster-level inference.",
+    "Event-study intervals are pointwise. Insignificant pretrends do not establish parallel trends.",
+    "Less than 80% of treated units retained; examine changes in the target population."
+  ],
+  "provenance": {
+    "input_sha256": "05a984df03e6c18e135f84060dc657dc4bb9083d004fae74ab8e6021924c0eca",
+    "config_sha256": "f0f5db16ff8dc648070b1e81cacb034cd7612e11655c7a511d71b9f592a9df9e",
+    "versions": {
+      "causal-impact-analysis": "0.1.0",
+      "numpy": "1.26.4",
+      "pandas": "2.3.3",
+      "scipy": "1.13.1",
+      "scikit-learn": "1.6.1",
+      "statsmodels": "0.14.6",
+      "matplotlib": "3.9.4"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "unit": "customer_id",
+  "period": "month",
+  "treated": "attended",
+  "outcome": "revenue",
+  "covariates": ["baseline_revenue", "revenue_trend", "revenue_volatility"],
+  "treatment_period": 4,
+  "caliper_sd": 0.2,
+  "seed": 42
+}
